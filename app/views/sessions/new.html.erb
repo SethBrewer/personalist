@@ -1,0 +1,49 @@
+<div class="column_container wide-narrow">
+  <!-- start left column container -->
+  <div class="col_1">
+    <!-- start left column -->
+    <div class="col_1-1">
+
+    <div class="login_box">
+      <% form_tag sessions_url do -%>
+        <fieldset class="textfield">
+          <%= label_tag 'email', 'Email' %>
+          <%= text_field_tag 'email' %>
+        </fieldset>
+        <fieldset class="textfield">
+          <%= label_tag 'password', 'Password' %>
+          <%= password_field_tag 'password' %>
+        </fieldset>
+        <fieldset class="checkbox">
+          <%= check_box_tag "remember_me" %>
+          <%= label_tag "remember_me", "Remember me?" %>
+        </fieldset>
+        <fieldset class="submit">
+          <%= submit_tag "Log In" %>
+          <%= link_to 'Create an Account', new_account_path %>
+        </fieldset>
+      <% end %>
+    </div>
+
+    </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_1-2">
+      <div class="display-text">Create, save, and manage personas and persona teams.</div>
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column container -->
+  <!-- start left column container -->
+  <div class="col_2">
+    <!-- start left column -->
+    <div class="col_2-1">
+    </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_2-2">
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column container -->
+</div>

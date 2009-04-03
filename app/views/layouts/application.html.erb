@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>PersonaTeams: <%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'reset' %>
+    <%= stylesheet_link_tag 'hacks' %>
+    <%= stylesheet_link_tag 'column_structures' %>
+    <%= stylesheet_link_tag 'scaffold' %>
+  </head>
+  <body>
+
+    <!-- start container -->
+    <div class="container clearfix">
+
+      <!-- start header -->
+      <div class="header">
+        <h1><%= link_to(image_tag('logo_personalist.gif', {:alt => 'Personalist', :border=>0}), index_path) %></h1>
+
+        <div class="header_login">
+          <% if not logged_in? %>
+            <dl>
+              <dd><%= link_to 'Log In', login_path %>&nbsp;&nbsp;&#124;&nbsp;</dd>
+              <dd><%= link_to 'Sign Up', signup_path %></dd>
+            </dl>
+          <% else %>
+            <dl>
+              <dt><%=h session[:account_name] %></dt>
+              <dd><%= link_to 'Logout', logout_path, :class => 'logout' %>&nbsp;&nbsp;&#124;&nbsp;</dd>
+              <dd><%= link_to 'Edit Your Account', edit_account_path(:id => session[:account_id]) %></dd>
+            </dl>
+          <% end %>
+        </div>
+      </div>
+      <!-- end header -->
+      <!-- start content -->
+      <div class="content clearfix">
+
+        <p class="notice"><%= flash[:notice] %></p>
+
+    <% if logged_in? %>
+
+        <%= yield  %>
+
+    <% end %>
+
+      </div>
+      <!-- end content -->
+<div class="footer">
+  <div class="license">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a> <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dc:title" rel="dc:type">Personalist</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sethbrewer.com" property="cc:attributionName" rel="cc:attributionURL">Seth Brewer</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.
+</div>
+</div>
+    </div>
+    <!-- end container -->
+
+  </body>
+</html>

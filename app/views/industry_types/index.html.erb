@@ -1,0 +1,20 @@
+<h1>Listing industry types</h1>
+
+<table>
+  <tr>
+    <th>industry name</th>
+  </tr>
+
+<% for industry_type in @industry_types %>
+  <tr>
+    <td><%=h industry_type.industry_type_name %></td>
+    <td><%= link_to 'Show', industry_type %></td>
+    <td><%= link_to 'Edit', edit_industry_type_path(industry_type) %></td>
+    <td><%= link_to 'Destroy', industry_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New industry type', new_industry_type_path %>

@@ -1,0 +1,41 @@
+div.content div.hidden {
+    display: none;
+}
+
+div.content div.column_container {
+  width: 60em;
+  margin: 0 auto;
+}
+
+div.content div.col_1 {
+  float: left;
+}
+
+div.content div.wide-narrow div.col_1-1 {
+  width: 37em;
+  margin-right: 3em;
+  float: left;
+}
+
+div.content div.wide-narrow div.col_1-2 {
+  width: 20em;
+  float: left;
+}
+
+div.content div.wide-narrow div.col_2 {
+  display: none;
+}
+
+div.content div.wide div.col_1-1 {
+  width: 60em;
+}
+
+div.content div.wide div.col_1-1 div.info-block {
+  width: 37em;
+  float: left;
+  margin-right: 3em;
+}
+
+div.content div.wide div.col_2 {
+  display: none;
+}

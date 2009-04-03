@@ -1,0 +1,21 @@
+<h1>Listing myers briggs types</h1>
+
+<table>
+  <tr>
+    <th>Myers Briggs name</th>
+  </tr>
+
+<% for myers_briggs_type in @myers_briggs_types %>
+  <tr>
+    <td><%=h myers_briggs_type.mbti_type_name %></td>
+    <td><%=h myers_briggs_type.mbti_type_description %></td>
+    <td><%= link_to 'Show', myers_briggs_type %></td>
+    <td><%= link_to 'Edit', edit_myers_briggs_type_path(myers_briggs_type) %></td>
+    <td><%= link_to 'Destroy', myers_briggs_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New myers briggs type', new_myers_briggs_type_path %>

@@ -1,0 +1,14 @@
+<p>
+  <b>Myers Briggs type name:</b>
+</p>
+<p>
+  <%=h @myers_briggs_type.mbti_type_name %>
+</p>
+
+<p>
+  <%=h @myers_briggs_type.mbti_type_description %>
+</p>
+
+
+<%= link_to 'Edit', edit_myers_briggs_type_path(@myers_briggs_type) %> |
+<%= link_to 'Back', myers_briggs_types_path %>

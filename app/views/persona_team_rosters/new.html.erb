@@ -1,0 +1,16 @@
+<h1>New persona team roster</h1>
+
+<% form_for(@persona_team_roster) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :persona_team_id %><br />
+    <%= f.text_field :persona_team_id %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', persona_team_rosters_path %>

@@ -1,0 +1,41 @@
+<div class="column_container wide clearfix">
+<!-- start left column block -->
+<div class="col_1">
+  <!-- start left column -->
+  <div class="col_1-1">
+
+    <h2><%=h @persona_team.persona_team_name %> <span>&nbsp;&#124;&nbsp;</span> <%= link_to 'Edit', edit_persona_team_path(@persona_team) %></h2>
+
+    <div class="info-block">
+      <p><%= @persona_team.persona_team_description %></p>
+    </div>
+
+    <dl class="box-right">
+      <dt>This Team's Personas</dt>
+      <% for persona in @persona_team.personas %>
+        <dd><%= link_to persona.formatted_name(:last_and_first), persona %> |
+        <%= link_to 'Destroy', persona, :confirm => 'Are you sure?', :method => :delete %></dd>
+      <% end %>
+    </dl>
+
+  </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_1-2">
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column block -->
+  <!-- start left column block -->
+  <div class="col_2">
+    <!-- start left column -->
+    <div class="col_2-1">
+    </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_2-2">
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column block -->
+</div>

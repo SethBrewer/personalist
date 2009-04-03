@@ -1,0 +1,226 @@
+a {
+  text-decoration: none;
+  color: #369;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #69c;
+}
+
+div.header {
+  padding: 0.5em;
+  width: 60em;
+  height: 2.5em;
+  margin: 0 auto;
+}
+
+div.header h1 {
+  display: inline;
+  float: left;
+}
+
+div.header div.header_login {
+  margin-top: 1.75em;
+  width: 20em;
+  float: right;
+}
+
+div.header div.header_login dl dt {
+  display: inline;
+  color: #666;
+  margin-right: 0.5em;
+}
+
+div.header div.header_login dl dd {
+  display: inline;
+  font-size: 0.75em;
+}
+
+div.content {
+  padding: 0 1.25em 6em 1.25em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+div.content h2 {
+  font-weight: normal;
+  font-size: 1.25em;
+  color: #666;
+  margin-bottom: 0.875em;
+  border-bottom: 2px solid black;
+}
+
+div.content p {
+  margin-bottom: 1em;
+}
+
+div.content div.display-text {
+  font-size: 2em;
+  color: #666;
+}
+
+div.content h2 span {
+  font-size: 0.875em;
+}
+
+div.content h2 a {
+  font-size: 0.75em;
+}
+
+div.content ul.ruled_list {
+  list-style: none;
+}
+
+div.content ul.ruled_list li {
+  padding: 0.5em 0;
+  border-bottom: 1px dashed #666;
+}
+
+div.content div.box-right {
+  padding: 0.25em;
+  width: 19.5em;
+  float: right;
+}
+
+div.content dl.box-right {
+  padding: 0.25em;
+  width: 19.5em;
+  float: right;
+}
+
+div.content dl.box-right dt {
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+
+div.content dl.box-right dd {
+  padding: 0.5em 0;
+  border-bottom: 1px dashed #666;
+}
+
+div.content div.wide {
+  width: 60em;
+  margin: 0 auto;
+}
+
+div.content div.wide-narrow {
+  width: 60em;
+  margin: 0 auto;
+}
+
+div.content div.wide-narrow div.col_1-1 {
+  width: 37em;
+  margin-right: 3em;
+  float: left;
+}
+
+div.content div.wide-narrow div.col_1-2 {
+  width: 20em;
+  float: left;
+}
+
+form fieldset {
+  margin-bottom: 1em;
+}
+
+form input {
+  font-size: 0.875em;
+}
+
+form input.textfield {
+  width: 33em;
+}
+
+form textarea {
+  font-size: 1.125em;
+}
+
+form textarea.description_textarea {
+  width: 32em;
+  height: 14em;
+}
+
+div.login_box {
+  width: 26em;
+  padding: 1em;
+  background-color: #ccc;
+}
+
+div.login_box form fieldset {
+    margin: 0.75em 0;
+    font-size: 1em;
+}
+
+div.login_box form fieldset.textfield label {
+    display: block;
+}
+
+div.login_box form fieldset.textfield input {
+    width: 18em;
+}
+
+div.login_box form fieldset.submit a {
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    border-left: 1px solid #333;
+}
+
+div.footer {
+    width: 60em;
+    margin: 1em auto;
+    clear: both;
+}
+
+div.footer div.license {
+    font-size: 0.75em;
+}
+
+p.notice {
+  width: 60em;
+  height: 3em;
+  padding-top: 1em;
+  margin: 0 auto;
+  color: red;
+  clear: both;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+

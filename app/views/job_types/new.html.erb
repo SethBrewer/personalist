@@ -1,0 +1,16 @@
+<h1>New job type</h1>
+
+<% form_for(@job_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :job_type_name %><br />
+    <%= f.text_field :job_type_name %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', job_types_path %>

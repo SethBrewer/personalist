@@ -1,0 +1,28 @@
+<% if logged_in? %>
+
+<h1>Listing persona team rosters</h1>
+
+<table>
+  <tr>
+    <th>Persona team roster name</th>
+  </tr>
+
+<% for persona_team_roster in @persona_team_rosters %>
+  <tr>
+    <td><%=h persona_team_roster.persona_team_id %></td>
+    <td><%= link_to 'Show', persona_team_roster %></td>
+    <td><%= link_to 'Edit', edit_persona_team_roster_path(persona_team_roster) %></td>
+    <td><%= link_to 'Destroy', persona_team_roster, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New persona team', new_persona_team_roster_path %>
+
+<% else %>
+
+	<%= link_to 'Login', login_path, :class => 'login' %>
+
+<% end %>

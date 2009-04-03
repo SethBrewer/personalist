@@ -1,0 +1,33 @@
+<!-- start left column -->
+<div class="col_1">
+  <div class="col_1-1">
+    
+    <h2>Accounts</h2>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+
+      <% for account in @accounts %>
+        <tr>
+          <td><%=h account.name %></td>
+          <td><%=h account.email %></td>
+          <td><%= link_to 'Show', account %></td>
+          <td><%= link_to 'Edit', edit_account_path(account) %></td>
+          <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <br />
+
+    <%= link_to 'New account', new_account_path %>
+
+  </div>
+  <div class="col_1-2">
+    col 2
+  </div>
+</div>
+<!-- end left column -->

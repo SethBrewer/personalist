@@ -1,0 +1,17 @@
+<p>
+  <b>Name:</b>
+  <%=h @account.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @account.email %>
+</p>
+
+<h2><%=h @account.name %>'s Questions:</h2>
+<ul>
+<% @account.questions.each do |question| %>
+	<li><%= link_to question.text, :controller => 'questions', :action => 'show', :id => question.id%>(<%=h question.responses.length %> responses)  [<%= link_to 'x', question, :confirm => 'Are you sure you want to remove this question?', :method => :delete %>]</li>
+<% end %>
+</ul>
+

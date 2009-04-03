@@ -1,0 +1,77 @@
+<% form_for(@persona, :html=> {:multipart=>true}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :middle_name %><br />
+    <%= f.text_field :middle_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+
+  <p>
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </p>
+
+  <p>
+    <%= f.label :ethnicity %><br />
+    <%= f.text_field :ethnicity %>
+  </p>
+
+  <p>
+    <%= label_tag :myers_briggs_type %><br />
+    <%= collection_select :persona, :myers_briggs_id, MyersBriggsType.find(:all), :id, :mbti_type_name, {:prompt => "Select"} %>
+  </p>
+
+  <p>
+    <%= f.label :photo %><br />
+    <%= file_field_tag :image_file %>
+  </p>
+
+  <p>
+    <%= f.label :photo_description %><br />
+    <%= text_field_tag :description %>
+  </p>
+
+  <p>
+    <%= label_tag :industry_type %>
+    <%= collection_select :persona, :industry_id, IndustryType.find(:all), :id, :industry_type_name, {:prompt => "Select"} %>
+  </p>
+
+  <p>
+    <%= label_tag :job_type %>
+    <%= collection_select :persona, :job_type_id, JobType.find(:all), :id, :job_type_name, {:prompt => "Select"} %>
+  </p>
+
+  <p>
+    <%= f.label :job_description %><br />
+    <%= f.text_area :job_description %>
+  </p>
+
+  <p>
+    <%= f.label :life_description %><br />
+    <%= f.text_area :life_description %>
+  </p>
+
+  <p>
+    <%= f.label :Status %><br />
+    <%= f.text_field :Status %>
+  </p>
+
+  <p>
+    <%= f.submit button_name, :class => 'submit' %>
+  </p>
+<% end %>

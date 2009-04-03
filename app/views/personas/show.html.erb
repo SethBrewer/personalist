@@ -1,0 +1,76 @@
+<div class="column_container wide clearfix">
+  <!-- start left column container -->
+  <div class="col_1">
+    <!-- start left column -->
+    <div class="col_1-1">
+
+<p>
+  <b>First name:</b>
+</p>
+
+<p>
+  <%=h @persona.formatted_name(:last_and_first) %>
+</p>
+<p>
+  <%=h @persona.middle_name %>
+</p>
+<p>
+  <%=h @persona.last_name %>
+</p>
+<p>
+  <%=h @persona.age %>
+</p>
+<p>
+  <%=h @persona.gender %>
+</p>
+<p>
+  <%=h @persona.ethnicity %>
+</p>
+<p>
+  <%=h @persona.myers_briggs_id %>
+</p>
+<p>
+  <%=h @persona.photo_id %>
+</p>
+<p>
+  <%=h @persona.industry_id %>
+</p>
+<p>
+  <%=h @persona.job_type_id %>
+</p>
+<p>
+  <%=h @persona.job_description %>
+</p>
+<p>
+  <%=h @persona.life_description %>
+</p>
+<p>
+  <%=h @persona.Status %>
+</p>
+
+
+<%= link_to 'Edit', edit_persona_path(@persona) %> |
+<%= link_to 'Back', personas_path %>
+
+
+    </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_1-2">
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column block -->
+  <!-- start left column block -->
+  <div class="col_2">
+    <!-- start left column -->
+    <div class="col_2-1">
+    </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_2-2">
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column block -->
+</div>

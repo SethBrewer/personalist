@@ -1,0 +1,36 @@
+<div class="column_container wide-narrow clearfix">
+  <!-- start left column container -->
+  <div class="col_1">
+    <!-- start left column -->
+    <div class="col_1-1">
+
+      <h2>Persona Teams <span>&nbsp;&#124;&nbsp;</span> <%= link_to 'New', new_persona_team_path %></h2>
+
+      <ul class="ruled_list">
+        <% for persona_team in @persona_teams %>
+          <li><%= link_to persona_team.persona_team_name, persona_team %></li>
+        <% end %>
+      </ul>
+
+    </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_1-2">
+      col 2
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column container -->
+  <!-- start left column container -->
+  <div class="col_2">
+    <!-- start left column -->
+    <div class="col_2-1">
+    </div>
+    <!-- end left column -->
+  <!-- start right column -->
+    <div class="col_2-2">
+    </div>
+    <!-- end right column -->
+  </div>
+  <!-- end left column container -->
+</div>

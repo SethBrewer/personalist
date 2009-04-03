@@ -1,0 +1,40 @@
+<% form_for(@persona_team) do |f| %>
+  <%= f.error_messages %>
+
+  <dl class="box-right">
+    <dt>Select Personas for this Team</dt>
+    <fieldset>
+      <% Persona.all.each do |persona| -%>
+        <dd><%= check_box_tag :persona_ids, persona.id, @persona_team.personas.include?(persona), :name => 'persona_team[persona_ids][]' -%>
+        <%= label_tag :persona, link_to(persona.formatted_name(:last_and_first), persona) -%></dd>
+      <% end -%>
+    </fieldset>
+  </dl>
+
+    <dl class="box-right">
+    <dt>Select Personas for this Team</dt>
+    <fieldset>
+      <% PersonaTeam.find(:all, :conditions => ['account_id = ?', session[:account_id]]).each do |persona| -%>
+        <dd><%= check_box_tag :persona_ids, persona.id, @persona_team.personas.include?(persona), :name => 'persona_team[persona_ids][]' -%>
+        <%= label_tag :persona, link_to(persona.formatted_name(:last_and_first), persona) -%></dd>
+      <% end -%>
+    </fieldset>
+  </dl>
+
+  <fieldset>
+    <%= f.label :team_name %><br />
+    <%= f.text_field :persona_team_name, :class => 'textfield' %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :team_description %><br />
+    <%= f.text_area :persona_team_description, :class => 'description_textarea' %>
+  </fieldset>
+
+  <div class="box-right">
+  <fieldset>
+    <%= f.submit button_name, :class => 'submit' %>
+    <%= link_to 'Cancel', index_path %>
+  </fieldset>
+  </div>
+<% end %>

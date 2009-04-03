@@ -1,0 +1,30 @@
+<p>
+  <b>Persona team name:</b> <%=h @persona_team_roster.persona_team.persona_team_name %>
+</p>
+
+   <p>Project Description: <%= @persona_team_roster.persona_team.persona_team_description %></p>
+
+ <p>Persona name: <%= @persona_team_roster.persona.first_name %></p>
+
+<table>
+  <tr>
+    <th>Personas:</th>
+  </tr>
+
+<% # for persona in @persona_team_roster %>
+  <tr>
+    <td><% # =h first_name %></td>
+</tr>
+<% # end %>
+</table>
+
+
+
+   <% @personas.each do |p| %>
+      <p><%=h p.first_name %></p>
+   <% end %>
+
+
+
+<%= link_to 'Edit', edit_persona_team_roster_path(@persona_team_roster) %> |
+<%= link_to 'Back', persona_team_rosters_path %>

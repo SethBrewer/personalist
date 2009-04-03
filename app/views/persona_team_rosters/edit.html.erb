@@ -1,0 +1,37 @@
+<h1>Editing job type</h1>
+
+<% form_for(@persona_team_roster) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :persona_team_id %><br />
+    <%= f.text_field :persona_team_id %>
+  </p>
+
+  <p>
+    <%= f.label :persona_id %><br />
+    <%= f.text_field :persona_id %>
+  </p>
+	
+  <p>
+    <%= f.label :job_needs %><br />
+    <%= f.text_area :job_needs %>
+  </p>
+	
+  <p>
+    <%= f.label :life_needs %><br />
+    <%= f.text_area :life_needs %>
+  </p>
+	
+  <p>
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </p>
+	
+   <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @persona_team_roster %> |
+<%= link_to 'Back', persona_team_rosters_path %>

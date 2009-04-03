@@ -1,0 +1,26 @@
+<% if logged_in? %>
+
+	<h2>Listing persona teams</h2>
+
+	<table>
+	  <tr>
+	    <th>persona team name</th>
+	  </tr>
+
+	<% for persona_team in @persona_teams %>
+	  <tr>
+	    <td><%=h persona_team.persona_team_name %>
+        </td>
+	    <td><%= link_to 'Show', persona_team %></td>
+	    <td><%= link_to 'Edit', edit_persona_team_path(persona_team) %></td>
+	    <td><%= link_to 'Destroy', persona_team, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+	<br />
+	<%= link_to 'New persona team', new_persona_team_path %>
+
+	<br />
+	<%= link_to 'Logout', logout_path, :class => 'logout' %>
+
+<% end %>
